@@ -1,7 +1,11 @@
 import math
 
+# Adapted from:  
+# https://www.geeksforgeeks.org/mid-point-circle-drawing-algorithm/
+
 # This is identical to that of SlowCircleDrawer
 # So you can accelerate it!
+
 
 class MyCircleDrawer:
     def __init__(self):
@@ -29,7 +33,9 @@ class MyCircleDrawer:
 
         # Printing the initial point the  
         # axes after translation  
-        points = [ (x + x_centre, y + y_centre) ]
+        points = self.sortedInsert( points, 
+                                    x + x_centre, y + y_centre,
+                                    x_centre, y_centre)  
 
         # When radius is zero only a single  
         # point be printed  

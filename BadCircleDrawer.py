@@ -28,7 +28,9 @@ class BadCircleDrawer:
 
         # Printing the initial point the  
         # axes after translation  
-        points = [ (x + x_centre, y + y_centre) ]
+        points = self.sortedInsert( points, 
+                                    x + x_centre, y + y_centre,
+                                    x_centre, y_centre)  
 
         # When radius is zero only a single  
         # point be printed  
